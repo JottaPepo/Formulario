@@ -1,0 +1,91 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 60px; /* Adicionei padding-bottom */
+    box-sizing: border-box;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+footer p {
+    margin: 0;
+    font-size: 18px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.checkbox-container {
+    display: flex; /* Isso garante que os itens sejam exibidos em linha */
+    flex-wrap: wrap; /* Permite que os itens que não cabem em uma linha vão para a próxima linha */
+    justify-content: space-around; /* Distribui o espaço entre os itens */
+    margin-top: 10px; /* Espaço acima dos checkboxes */
+}
+
+.checkbox-item {
+    display: flex;
+    flex-direction: column; /* Itens empilhados verticalmente */
+    align-items: center; /* Centraliza os itens */
+    margin: 10px; /* Espaço entre os itens */
+}
+
+.checkbox-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkbox-item img:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
