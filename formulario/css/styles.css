@@ -1,46 +1,125 @@
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    padding-bottom: 60px; /* Adicionei padding-bottom */
+    background-color: #f8f9fa;
+    color: #343a40;
     box-sizing: border-box;
 }
+
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
 .input-group {
     margin-bottom: 20px;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
+
 input, select, textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
     box-sizing: border-box;
+    transition: border-color 0.3s;
 }
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+button:hover {
+    background-color: #0056b3;
+}
+
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: #343a40;
+    color: #ffffff;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
 footer p {
     margin: 0;
     font-size: 18px;
 }
+
+.app-container {
+    margin-bottom: 20px;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.app i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.checkbox-item img {
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.checkbox-item img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 input[type="checkbox"] {
     display: none;
 }
@@ -50,7 +129,7 @@ input[type="checkbox"] + label {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    border: 2px solid #007BFF;
+    border: 2px solid #007bff;
     cursor: pointer;
     position: relative;
     margin-top: 10px;
@@ -61,31 +140,9 @@ input[type="checkbox"]:checked + label::before {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #007BFF;
+    background-color: #007bff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.checkbox-container {
-    display: flex; /* Isso garante que os itens sejam exibidos em linha */
-    flex-wrap: wrap; /* Permite que os itens que não cabem em uma linha vão para a próxima linha */
-    justify-content: space-around; /* Distribui o espaço entre os itens */
-    margin-top: 10px; /* Espaço acima dos checkboxes */
-}
-
-.checkbox-item {
-    display: flex;
-    flex-direction: column; /* Itens empilhados verticalmente */
-    align-items: center; /* Centraliza os itens */
-    margin: 10px; /* Espaço entre os itens */
-}
-
-.checkbox-item img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.checkbox-item img:hover {
-    transform: scale(1.5);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
